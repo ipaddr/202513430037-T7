@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/bg_card_glass"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgBusLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_icon_circle_glass"
+        android:padding="8dp"
+        android:src="@drawable/ic_notifications"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/primary_blue" />
+
+    <TextView
+        android:id="@+id/tvOperatorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="NPM"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/imgBusLogo"
+        app:layout_constraintTop_toTopOf="@id/imgBusLogo" />
+
+    <TextView
+        android:id="@+id/tvClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sutan Class"
+        android:textColor="@color/white_dim"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tvOperatorName"
+        app:layout_constraintTop_toBottomOf="@id/tvOperatorName" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_facility_chip"
+        android:gravity="center"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@android:drawable/star_on"
+            app:tint="#FACC15" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="4.8"
+            android:textColor="#FACC15"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTimeDepart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="08:00"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBusLogo" />
+
+    <TextView
+        android:id="@+id/tvTimeArrive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="14:00"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBusLogo" />
+
+    <View
+        android:id="@+id/lineDuration"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@drawable/bg_dashed_line"
+        android:layerType="software"
+        app:layout_constraintBottom_toBottomOf="@id/tvTimeDepart"
+        app:layout_constraintEnd_toStartOf="@id/tvTimeArrive"
+        app:layout_constraintStart_toEndOf="@id/tvTimeDepart"
+        app:layout_constraintTop_toTopOf="@id/tvTimeDepart" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_main"
+        android:paddingHorizontal="4dp"
+        android:text="6 Jam"
+        android:textColor="@color/white_dim"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/lineDuration"
+        app:layout_constraintEnd_toEndOf="@id/lineDuration"
+        app:layout_constraintStart_toStartOf="@id/lineDuration"
+        app:layout_constraintTop_toTopOf="@id/lineDuration" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollFacilities"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeDepart">
+
+        <LinearLayout
+            android:id="@+id/layoutFacilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#20FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/scrollFacilities" />
+
+    <TextView
+        android:id="@+id/lblPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Total Harga"
+        android:textColor="@color/white_dim"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp 250.000"
+        android:textColor="@color/primary_blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblPrice" />
+
+    <TextView
+        android:id="@+id/tvSeats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sisa 5 Kursi"
+        android:textColor="@color/seat_available_green"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+    <Button
+        android:id="@+id/btnBook"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_button_primary"
+        android:text="Pilih"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/lblPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

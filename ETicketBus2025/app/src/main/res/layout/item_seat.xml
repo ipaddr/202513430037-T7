@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemSeat"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_seat_available"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:text="1A"
+    android:textColor="@color/black_text"
+    android:textSize="12sp"
+    android:textStyle="bold" />

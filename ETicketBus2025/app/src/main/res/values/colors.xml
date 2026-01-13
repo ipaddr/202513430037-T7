@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Background Utama (Dark Theme Modern) -->
+    <color name="bg_main">#0A0F1A</color>
+    <color name="bg_surface">#111827</color>
+
+    <!-- Primary (Blue Modern M3) -->
+    <color name="primary_blue">#3B82F6</color>
+    <color name="primary_blue_dark">#1E40AF</color>
+    <color name="primary_blue_light">#60A5FA</color>
+
+    <!-- Secondary & Accent (Sekarang Biru) -->
+    <color name="secondary_blue">#2563EB</color>
+    <color name="accent_orange">@color/primary_blue_light</color>
+
+    <!-- Seat Status Colors -->
+    <color name="seat_available_green">#10B981</color>
+    <color name="seat_available_stroke">#10B981</color>
+    <color name="seat_filled">#475569</color>
+    <color name="seat_selected">@color/primary_blue</color>
+
+    <!-- Text Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="white_dim">#CBD5E1</color>
+    <color name="white_muted">#94A3B8</color>
+    <color name="white_muda">#dfe2e6</color>
+
+
+    <color name="black_text">#1E293B</color>
+
+    <!-- Border & Divider -->
+    <color name="gray_light">#E2E8F0</color>
+    <color name="gray_dark">#334155</color>
+
+    <!-- Glass Effect -->
+    <color name="white_glass">#0FFFFFFF</color>
+
+    <!-- Navigation -->
+    <color name="nav_active">@color/primary_blue</color>
+    <color name="nav_inactive">#64748B</color>
+
+    <!-- Operators Uniform / Tag Colors -->
+    <color name="op_uniform_bg">#1E293B</color>
+    <color name="op_uniform_text">@color/primary_blue_light</color>
+
+    <!-- Slate -->
+    <color name="slate_900">#0F172A</color>
+
+</resources>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_header_rounded"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:background="@color/gray_light"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Filter &amp; Urutkan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black_text"/>
+
+        <TextView
+            android:id="@+id/btnResetFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textColor="@color/primary_blue"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Urutkan Berdasarkan"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black_text"
+        android:layout_marginBottom="12dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        android:layout_marginBottom="24dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSortPriceAsc"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga Terendah"
+            android:textColor="@color/black_text"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/white_dim"
+            app:checkedIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSortTimeAsc"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu Terawal"
+            android:textColor="@color/black_text"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/white_dim"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSortTimeDesc"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu Terakhir"
+            android:textColor="@color/black_text"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/white_dim"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelas Bus"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black_text"
+        android:layout_marginBottom="12dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        android:layout_marginBottom="32dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipClassAll"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semua Kelas"
+            android:checked="true"
+            android:textColor="@color/black_text"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/white_dim"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipClassExecutive"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Executive"
+            android:textColor="@color/black_text"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/white_dim"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipClassRoyal"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Royal Class"
+            android:textColor="@color/black_text"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/white_dim"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipClassSutan"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sutan Class"
+            android:textColor="@color/black_text"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/white_dim"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/btnApplyFilter"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Terapkan Filter"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button_primary"
+        android:backgroundTint="@color/primary_blue"
+        app:backgroundTint="@null"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

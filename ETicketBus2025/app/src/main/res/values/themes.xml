@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.ETicketBus2025" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/primary_blue_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:colorBackground">@color/bg_main</item>
+
+        <item name="android:statusBarColor">@color/bg_main</item>
+
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.ETicketBus2025" parent="Base.Theme.ETicketBus2025" />
+</resources>
